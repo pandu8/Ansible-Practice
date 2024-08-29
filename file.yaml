@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: i want to create file on all nodes
+    file:
+      path: /home/vasu/vasu.txt
+      state: touch

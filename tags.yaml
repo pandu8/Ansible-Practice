@@ -22,3 +22,6 @@
      state: present
     tags:
     - mavenpackage
+
+#### command
+>> ansible-playbook -i hosts tags.yaml --tags=javapackage

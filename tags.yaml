@@ -1,0 +1,24 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install docker
+    apt:
+     name: docker.io
+     state: present
+    tags:
+    - dockerpackage
+
+  - name: install java
+    apt:
+     name: default-jdk
+     state: present
+    tags:
+    - javapackage
+
+  - name: install maven
+    apt:
+     name: maven
+     state: present
+    tags:
+    - mavenpackage

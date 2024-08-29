@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: install git
+    apt:
+      namee: git
+    ignore_errors: yes
+
+  - name: install tree
+    apt:
+      name: wget
+  
+  - name: install wget
+    apt:
+      name: unzip

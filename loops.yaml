@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install docker,tree on nodes
+    apt:
+     name: "{{ item }}"
+     state: present
+    with_items:
+     - docker.io
+     - tree

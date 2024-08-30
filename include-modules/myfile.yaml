@@ -1,0 +1,7 @@
+---
+- name: i want to create file on all nodes
+  file:
+      path: /home/vasu/dummy.txt
+      state: touch
+~
+~

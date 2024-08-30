@@ -1,0 +1,15 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - include_tasks: myfile.yaml
+  - name: i want to nginx on webserver
+    apt:
+      name: nginx
+      state: present
+    notify: startwebserver
+
+  - name: i want to copy index file into all nodes
+    template:
+      src: index.j2
+      dest: /usr/share/nginx/html/index.html
